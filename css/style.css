@@ -3,8 +3,8 @@
     padding: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif; 
     text-decoration: none; }
+   
          
-
 /*/////////////////  M   E   N   U  ////////////*/ 
 nav{padding: 2.1875em;
     width: 100%;
@@ -54,7 +54,8 @@ nav a{
     width: 45%;
     padding-left: 13%;
     padding-top: 22%;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;  }
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+    border: 1px solid black; }
          
 .mi-nombre h2{
     font-size: 1.5em;  }
@@ -83,7 +84,8 @@ h1{
     color: white; }
 
 .mi-imagen{
-    width: 55%; }
+    width: 55%;
+    border: 1px solid black; }
 
 .mi-imagen img{
     width: 80%;
@@ -145,7 +147,8 @@ h1{
 
 figcaption{
     font-weight: bold;
-    font-size: 1em; }
+    font-size: 1em;
+    text-align: center; }
 .box:hover{
     border: 1px solid #8B2AF3;
     color: #8B2AF3; }
@@ -200,7 +203,7 @@ figcaption{
     font-size: 0.81em;
     padding-bottom: 0%; 
     margin-bottom: 0%;
-    color: #2C3E50;  }
+    color: #2C3E50;    }
                
 .son img{
     width: 93%; }
@@ -208,12 +211,12 @@ figcaption{
 .son:hover{
     color: #8B2AF3;
     border: 1px solid #8B2AF3;
-    box-shadow: 0 0 6px #8B2AF3;
-    } 
+    box-shadow: 0 0 6px #8B2AF3;  }
+    
 
-    /*.son a>figcaption:hover{
-    color: #8B2AF3;
-}*/
+figcaption:hover{
+    color: #8B2AF3;  }
+
 
 
     /*/////////////// C O N T A C T O ///////////////////*/
@@ -225,7 +228,7 @@ figcaption{
     padding-bottom: 6%;
     box-shadow: inset -7px 0px 6px 0px rgba(61, 44, 141, 0.62); } 
 .contenedor-3{
-    width: 72%;
+    width: 83%;
     margin: 0 auto;
     border: 1px solid lightgrey;
     border-radius: 8px;
@@ -237,7 +240,8 @@ figcaption{
        
 .contactame{
     width: 45%;
-    padding-left: 5%;  }
+    padding-left: 5%;   }
+    
     
 .contenedor-3 h2{
     font-size: 2.6em;
@@ -251,16 +255,19 @@ figcaption{
 
 .redes{
     display: inline-block;
-    width: 60%;}                              
+    width: 80%;}                              
 .redes a{
     color: #2C3E50; 
-    list-style: none;   }
+    list-style: none; 
+     }
 
 .icom{
     margin-right: 4%; }
        
 .item{
-    margin-bottom: 5%;  }
+    margin-bottom: 5%;
+     
+ }
      
 .icom{
     color: #8B2AF3;
@@ -284,36 +291,46 @@ figcaption{
     width: 50%; 
     padding-bottom: 4%;
     padding-left: 4%;
-    padding-right: 3%;  }
+    padding-right: 3%;
+    border: black solid 1px;  }
 
 input{
     border-radius: 15px;
     border: none;
     padding: 0.9em;
-    margin-top: 3%; }
+    margin-top: 3%;
+    width: 82%;     }
 
-.apellido{
-    padding-left: 4%; }
-
+.apellido, .nombre{
+  flex-grow: 1;
+   } 
+       
 input:focus{
     box-shadow: 0 0 8px #8B2AF3;
     outline: none;  }
     
 .form-1{
+    border: black solid 1px;
     display: flex;
+    justify-content: space-between;
     margin-top: 5%;
-    width: 95%;    }
+    width: 100%;    }
        
 label{
     font-weight: bold;
     font-size: 0.8em; }
   
 .email{
-    width: 98%;
-    margin-top: 3%;  }
-.textarea{
-    margin-top: 3%; }
+    border: black solid 1px;
+    margin-top: 3%;
+    width: 100%; }
 
+.email input{
+    width: 92%;  }
+    
+.textarea{
+    margin-top: 3%;  }
+    
 textarea:focus{
     box-shadow: 0 0 8px #8B2AF3;
     outline: none;}
@@ -322,10 +339,13 @@ textarea:focus{
     border-radius: 15px;
     border: none;
     padding: 0.5em; 
-    margin-top: 3%; }
+    margin-top: 3%;
+    width: 95%;
+    padding-left: 3%; }
 
 .submit{
-    margin-bottom: 6%; }
+    margin-bottom: 6%;
+    width: 25%; }
 
 
     
@@ -345,7 +365,7 @@ footer .nav a{
     padding: 0.6em;
     border-radius: 1.25em;
     color: white;   }
-        
+            
 footer .nav a:active{
     border-radius: 1.25em;
     box-shadow: 0 0 8px 0 white;   }
@@ -357,8 +377,9 @@ footer i{
     font-size: 1.3em;   }
     
 footer .icom-2{
+    border: solid black 1px;
     margin: 2% auto;
-       width: 20%; }
+    width: 35%; }
 
 footer i:hover{
     background-color: #8B2AF3;
@@ -369,6 +390,99 @@ footer p{
     padding-bottom:  5%;
     margin: 0 auto; }
 
+/*///////////////   M E D I A    Q U E R Y   //////////////////////////////*/
+
+
+@media  (max-width: 1131px){
+    nav{
+        display: none;
+    
+    }  
+    .presentacion{
+        flex-direction: column;
+    }
+    .mi-nombre{
+        margin: auto;
+        text-align: center;
+        padding: 12%;
+    }
+    .mi-imagen{
+        margin: auto;
+        width: 80%;
+        }
+    .mi-imagen img{
+        padding-top: 4%;
+        padding-bottom: 10%;
+    }  
+    .contenedor-1{
+        width: 83%;
+    }  
+}
+@media (max-width: 1117px){
+    .cita q{
+        padding-left: 4% ;
+        padding-right: 4%; 
+    }
+    
+    }
+
+
+@media (max-width: 940px){
+    .contenedor-1{
+        width: 80%;
+    }
+}
+      
+@media (max-width: 903px){
+     .box{
+         width: 20%;
+     }
+     .contenedor-2{
+         width: 85% ;
+     }
+     .son{
+         width:30% ;
+     }
+}
+
+@media (max-width: 900px){
+     .contenedor-3{
+         flex-direction: column;
+         margin: auto;
+     }
+    .contactame, .escribeme{
+         margin-top: 3%;
+         width: 80%;
+         margin: auto; }
+    .contactame .redes{
+        border: black solid 1px;
+        width: 100%;
+       /* solucionar aca*/
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+        justify-content: space-between;
+    }
+    .item{
+        width: 45%;
+        border: black solid 1px;
+
+    }
+    }
+
+@media (max-width: 717px){
+    footer .icom-2{
+        width: 48%;  }
+}
+
+
+@media (max-width: 700px){
+    footer .nav{
+        display: none;
+    }
+}
+
+    
 
 
 
